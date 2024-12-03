@@ -1,0 +1,410 @@
+ *{
+    box-sizing: border-box;
+    font-family: Georgia, 'Times New Roman', Times, serif ;
+} 
+body{
+    overflow-x: hidden;
+}
+.main{
+    width: 100%;
+    height: 120vh;
+    background-image: url("assets/banner.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    color: white;
+    padding: 60px;
+   }
+   
+ .logo{
+    width: 30%;
+    height: auto;
+    border-bottom: 10px solid grey;
+    background-color:  rgb(3, 3, 81);
+    box-shadow: 1px 1px 5px 8px  rgb(83, 83, 150);
+    text-align: center;
+    padding:2px;
+    border-radius: 25px;
+    color:whitesmoke;
+    font-size: xx-large;
+    font-weight: 900;
+}
+@media(max-width:1200px){
+    .caption{
+    height:200px;
+}
+.logo{
+    width: 80%;
+}
+}
+@media(max-width:600px){
+   .caption{
+        height:400px;
+    }
+    
+    .main{
+         width:530px;
+        height: 100px;
+        
+}
+
+}
+
+.wrapped{
+    
+    font-size: larger;
+    font-weight: 500;
+}
+.caption{
+    font-size: x-large;
+    font-weight: 900;
+}
+.show{
+    width: 100%;
+    height: auto;
+    padding: 50px;
+    background-color: rgb(18, 26, 3);
+    text-align: center;
+}
+.show h1{
+    color: blue;
+    font-size: larger;
+    font-weight: 900;
+    padding: 10px;
+    border: 2px solid grey;
+    border-radius: 25px;
+}
+.active {
+    width: 100%;
+    height: auto;
+    color: blue;
+}
+.s1{
+    width: 10%;
+    height: auto;
+    float: left;
+    display: table;
+    clear: both;
+    text-align: center;
+    
+}
+.s1 a{
+    padding: 100px;
+    font-size: x-large;
+    font-weight: 500;
+}
+.flex {
+    display: flex;
+    flex-wrap: wrap;
+}
+@media(max-width:1200px){
+    .s1{
+        padding:15px ;
+        text-align: center;
+}
+.bg{
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
+}
+
+ /*CSS3*/
+ .bg{
+    overflow-x: hidden;
+    overflow-y: hidden;
+ }
+ .bg{
+    width: 100%;
+    height: 100vh;
+    background-image:linear-gradient(
+        to left,
+        rgba(255, 0, 0,0.546),
+        rgba(0, 0, 0, 0.495)
+         ) ,
+         url("assets/bg1.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    background-position: center;
+    animation-name:zoomIn;
+    animation-iteration-count: infinite;
+    animation-duration: 10s;
+    animation-direction: alternate;
+}
+@media(max-width:550px){
+    .main{
+        width: 500px;
+        height:auto;
+        }
+}
+.bg h1 {
+    font-family: myfont;
+    letter-spacing: 10px;
+    font-size: 100px;
+    color: transparent;
+    animation-name:flip;
+    animation-iteration-count:infinite;
+     animation-duration:2s;
+    -webkit-text-stroke: 2px white;
+}
+.bg h1::after{
+    content: "GOA";
+    animation-name: locations;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+
+}
+@font-face{
+    font-family: myfont;
+    src:url("Kirgina\ DEMO.ttf")
+}
+@keyframes zoomIn {
+   /* 0% {
+        font-size: 0px;
+    }
+    100% {
+        font-size: 120px;
+    }
+}*/
+
+
+0%{
+    background-size: 100%;
+}
+100%{
+    background-size: 200%;
+}
+}
+@keyframes locations {
+    0% {
+        content: "telugu movies";
+}
+20% {
+    content: "hindi movies";
+}
+40%{
+    content: "tamil movies";
+}
+60%{
+    content: "kannada movies";
+}
+80%{
+    content: "english movies";
+}
+100%{
+    content: "tv shows";
+}
+}
+/*movies*/
+.homepage{
+    width: 100%;
+    height: auto;
+    background-color:black; 
+}
+aside{
+    width: 40%;
+    height: auto;
+    background-color:gray;
+    color: rgb(6, 6, 74);
+    padding: 50px 10px;
+    text-align: center;
+    font-size: x-large;
+    font-weight: 500;
+    height: 800px;
+    float: left;
+    display: table;
+    clear: both;
+    
+}
+aside button{
+    width:80%;
+    height:60px;
+    border:none;
+    text-align: center;
+    padding: 10px;
+    margin-bottom: 30px;
+    background-color:black; 
+    color: blue;
+    font-size: smaller;
+    font-weight: 500;
+}
+.matter{
+    width: 60%;
+    height: auto;
+    float: left;
+    display: table;
+    clear: both;
+    color: blue;
+    padding: 25px;
+    text-align: center;
+    font-size: xx-large;
+    font-weight: 900;
+
+}
+.matter p{
+    padding: 50px;
+}
+aside button:hover{
+    background-color: rgb(12, 12, 102);
+    color: black;
+}
+@media(max-width:550px){
+    .homepage aside{
+        display:none;
+    }
+    }
+/*tv|shows*/
+.clubapp{
+    width: 100%;
+    height: 700px;
+    background-color: black;
+    text-align: center;
+    color: blue;
+
+}
+.clubapp h1{
+    padding: 20px;
+}
+.app{
+    width:100%;
+    height: auto;
+    text-align:center;
+    padding-left: 30px;
+    }
+    .prime{
+    width:20%;
+    float:left;
+    clear: both;
+    display: table;
+    padding:20px ;
+    margin: 10px;
+    border-radius: 20px;
+    }
+    .prime{
+    box-shadow:1px 1px 3px 1px rgb(151, 125, 125);
+    padding-bottom:10px;
+    transition-duration:1s; 
+    }
+    .prime:hover{box-shadow:1px 1px 10px 5px blue;
+        transition-duration: 0.5s;
+    }
+    .prime img {
+    width:200px;
+    height: 300px;
+    }
+    @media(max-width:1200px){
+        .clubapp{
+            height:auto;
+            }
+        .prime img{
+        width:900px;
+        height: 400px;
+        }
+       
+    }
+    @media(max-width:550px){
+        .clubapp{
+         height:auto;
+         padding:80px;
+         }
+        .prime img{
+            width:120px;
+            height: 100px;
+            }
+            .prime h1{
+                font-size: small;
+                font-weight: 500;
+            }
+       }
+       
+    /*webseries*/
+    .series{
+        width: 100%;
+        height: 800px;
+        color:blue;
+        background-color: black;
+        text-align: center;
+        padding: 10px;
+        font-size: xx-large;
+        font-weight: 900;
+    }
+    .series img{
+        width: 100%;
+        height: 500px;
+        padding-right: 50px;
+    }
+    .series input{
+        width: 300px;
+        height: 3px;
+        border: 1px solid rgb(207, 225, 233);
+        padding: 20px;
+        background-color:red;
+        text-align: center;
+        margin: 20px;
+        font-size: x-large;
+        font-weight: 200;
+    }
+    input:hover{
+        background-color:grey;
+    }
+    input:focus{
+        background-color:blue;
+        color: white;
+    }
+    input::placeholder{
+        color:white;
+    }
+    
+    @media(max-width:1200px){
+        .series img{
+        width:900px;
+        height: 400px;
+        }
+       
+    }
+    @media(max-width:550px){
+        .series img{
+        width: 380px;
+        height: 200px;
+        padding-left: 40px;
+         }
+       }
+
+    /*today*/
+    .newarrival{
+    padding: 10px;
+    background-color:blue;
+    text-align: center;
+    font-size: xx-large;
+    font-weight: 900;
+    color:black;
+}
+.buy{
+    text-align: center;
+    clear: both;
+    display: table;
+    padding: 50px;
+}
+.buy img{
+    width: 300px;
+    height: 300px;
+    margin-left: 80px;
+    box-shadow: 2px 2px 10px 10px black;
+    transition: 1s;
+    border-radius: 10px;
+}
+@media(max-width:550px){
+    .buy img{
+    padding-right: 20px;
+    margin: 20px;
+    }
+    .newarrival h1{
+    font-size: x-large;
+    font-weight: 900;
+
+    }
+   
+}
+    
